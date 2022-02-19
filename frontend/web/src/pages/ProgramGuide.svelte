@@ -3,31 +3,42 @@
     import Footer from '../components/elements/Footer.svelte';
     import {_} from 'svelte-i18n';
     import {locale} from 'svelte-i18n';
+
 </script>
 
 
 <section class="section">
     <div class="container">
-        {#each programguide.reverse() as pg}
+        {#each programguide as pg}
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                            <img src={pg.thumb} alt={pg.alt}>
+                        <img src={pg.thumb} alt={pg.alt}>
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="content">
                         <h4>{pg.head}</h4>
                         <p class="ribbon">{pg.date}</p>
-                        {#if $locale==='hu'}
+                        {#if $locale === 'hu'}
                             <p>{pg.type}</p>
                         {/if}
-                        {#if $locale==='en'}
+                        {#if $locale === 'en'}
                             <p>{pg.type_en}</p>
                         {/if}
+
                         <a href={pg.path} class="card-button">
-                            {$_('programguide.button')}</a>
+                            {$_('programguide.button')}
+                        </a>
+                        <br>
+                        {#if (pg.path_en !== "")}
+                            <a href={pg.path_en} class="card-button">
+                                {$_('programguide.button_en')}
+                            </a>
+                        {/if}
                     </div>
+
+
                 </div>
             </div>
         {/each}

@@ -35,7 +35,8 @@
   "countdown.minute": "Minutes",
   "countdown.second": "Seconds",
 
-  "programguide.button": "Check",
+  "programguide.button": "Check(HU)",
+  "programguide.button_en": "Check(EN)",
 
   "accommodations.label.description": "Description: ",
   "accommodations.label.services": "Services: ",

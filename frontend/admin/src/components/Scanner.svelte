@@ -1,5 +1,5 @@
 <script>
-    import {programs, scannerData, days} from '../applications/statData/GetPrograms'
+    import {scannerData, days, rooms} from '../applications/statData/GetPrograms'
     import ScannerFormData from "src/applications/formData/ScannerFormData.ts";
     import {writable} from "svelte/store";
 
@@ -68,7 +68,7 @@
                                 <select bind:value={formData.date}>
                                     <option value="">Kérem válasszon!</option>
                                     {#each days as day}
-                                        <option value={day.name}>{day.name}</option>
+                                        <option value={day.name}>{day.name} - {day.day}</option>
                                     {/each}
                                 </select>
                             </div>
@@ -80,11 +80,11 @@
                             <div class="select is-fullwidth">
                                 <select bind:value={formData.room}>
                                     <option value="">Kérem válasszon!</option>
-                                    {#each scannerData as prog}
-                                        {#if formData.date === prog.date}
-                                            <option value={prog.room}>{prog.room}</option>
-                                        {/if}
-                                    {/each}
+                                    {#if formData.date !== ""}
+                                        {#each rooms as room}
+                                            <option value={room.name}>{room.name}</option>
+                                        {/each}
+                                    {/if}
                                 </select>
                             </div>
                         </div>
@@ -126,10 +126,10 @@
              class:has-background-success={$success} class:has-background-danger={!$success}>
             {#if $success && resName != undefined}
                 <!--                <h1 class="has-text-centered has-text-white"><b>Sikeres regisztráció</b><br></h1>-->
-                <table  class="fl-table">
+                <table class="fl-table">
                     <tr>
-                        <td class="titlelabel">Név: </td>
-                        <td class="titlelabel">Egyetemi azonosító: </td>
+                        <td class="titlelabel">Név:</td>
+                        <td class="titlelabel">Egyetemi azonosító:</td>
                     </tr>
                     <tr>
                         <td class="titlevalue">{resName[0]}</td>
@@ -142,10 +142,10 @@
                         <td colspan="2"><h2 class="center">Sikeres leolvasás!</h2></td>
                     </tr>
                 </table>
-<!--                <h1 class="has-text-centered has-text-white">{resName[0]}</h1>-->
-<!--                <h4 class="has-text-centered has-text-white">Neptun kód: {resName[1]}</h4>-->
-<!--                <h4 class="has-text-centered has-text-white">{resQr}</h4>-->
-<!--                <h2 class="has-text-centered has-text-white"><b>Sikeres leolvasás!</b><br></h2>-->
+                <!--                <h1 class="has-text-centered has-text-white">{resName[0]}</h1>-->
+                <!--                <h4 class="has-text-centered has-text-white">Neptun kód: {resName[1]}</h4>-->
+                <!--                <h4 class="has-text-centered has-text-white">{resQr}</h4>-->
+                <!--                <h2 class="has-text-centered has-text-white"><b>Sikeres leolvasás!</b><br></h2>-->
             {/if}
             {#if !$success}
                 <h1 class="has-text-centered has-text-white"><br><b>Hiba!</b><br>{$message}</h1>
@@ -159,15 +159,16 @@
     /*    border-style: none;*/
     /*    color: white;*/
     /*}*/
-    .titlelabel{
+    .titlelabel {
         font-size: 20px;
     }
 
-    .titlevalue{
+    .titlevalue {
         font-size: 26px;
         font-weight: bold;
     }
-    .center{
+
+    .center {
         text-align: center;
         color: white;
     }
@@ -191,8 +192,6 @@
     .fl-table td {
         border-right: 1px solid #f8f8f8;
     }
-
-
 
 
 </style>

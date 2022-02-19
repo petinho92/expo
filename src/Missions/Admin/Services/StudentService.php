@@ -11,7 +11,6 @@ class StudentService{
 
         foreach ($data as $adat) {
             $array[] = (object)[
-                'id' => $adat->id,
                 'name' => $adat->name,
                 'neptun' => $adat->neptun,
                 'email' => $adat->email,

@@ -13,7 +13,7 @@ class EmailService{
             $array[] = (object)[
                 'name' => $adat->toName,
                 'email' => $adat->toEmail,
-                'qr' => $adat->toQr,
+                'qrcode' => $adat->toQr,
                 'statusSent'=>$adat->statusSent,
                 'sentDate' =>$adat->sentTime
             ];

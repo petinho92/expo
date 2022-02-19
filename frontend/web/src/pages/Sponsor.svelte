@@ -1,6 +1,7 @@
 <script>
     import {partners} from "src/application/store/sponsors.ts";
     import Footer from "src/components/elements/Footer.svelte";
+    import {_} from "svelte-i18n";
 </script>
 
 
@@ -19,7 +20,7 @@
                     <div class="content">
                         <h4 class="is-size-7">{pg.name}</h4>
                         <a href={pg.website} class="card-button">
-                            Megnézem</a>
+                            {$_('programguide.button')}</a>
                     </div>
                 </div>
             </div>

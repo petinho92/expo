@@ -35,7 +35,8 @@
   "countdown.minute": "Perc",
   "countdown.second": "Másodperc",
 
-  "programguide.button": "Megnézem",
+  "programguide.button": "Megnézem(HU)",
+  "programguide.button_en": "Megnézem(EN)",
 
 
   "accommodations.label.description": "Leírás: ",

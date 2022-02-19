@@ -5,6 +5,8 @@ use Application\Missions\Admin\Services\StudentService;
 use Atomino\Mercury\Responder\Api\Api;
 use Atomino\Mercury\Responder\Api\Attributes\Route;
 
+use function Atomino\debug;
+
 class StatApi extends Api{
     public function __construct(private StudentService $studentService, private EmailService $emailService)
     {
@@ -14,6 +16,8 @@ class StatApi extends Api{
     public function getList(){
         return $this->studentService->getAll();
     }
+
+
 
     #[Route(self::GET, '/getCount')]
     public function getCount(){
