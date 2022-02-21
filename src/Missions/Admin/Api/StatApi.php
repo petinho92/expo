@@ -28,4 +28,32 @@ class StatApi extends Api{
     public function getEmailSender(){
         return $this->emailService->getAll();
     }
+
+    #[Route(self::GET, '/getAll')]
+    public function getAll(){
+        //student: name, neptun, email, qrcode
+        //email: name, email, qrcode, statusSent, sentDate
+
+        $results = array();
+
+        $students = $this->studentService->getAll();
+        $emails = $this->emailService->getAll();
+
+        foreach ($students as $student){
+            foreach ($emails as $email){
+                if($student->qrcode == $email->qrcode){
+                    $results[] = (object)[
+                        'name' => $student->name,
+                        'email' => $student->email,
+                        'neptun' => $student->neptun,
+                        'qrcode' => $student->qrcode,
+                        'statusSent' => $email->statusSent,
+                        'sentDate' =>$email->sentDate
+                    ];
+
+                }
+            }
+        }
+        return $results;
+    }
 }

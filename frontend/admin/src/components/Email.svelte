@@ -27,7 +27,7 @@
     }
 
     onMount(async () => {
-        const resp = await fetch('/stat/getEmail')
+        const resp = await fetch('/stat/getAll')
         const data = await resp.json();
         users = data;
 
@@ -37,8 +37,10 @@
     <div class="wrapper">
         <Datatable settings={settings} data={users} bind:dataRows={rows}>
             <thead class="thhead">
+<!--            name, email, neptun, qrcode, statusSent, sentDate-->
             <th data-key="name" class="thhead">Név</th>
             <th data-key="email" class="thhead">Email</th>
+            <th data-key="neptun" class="thhead">Neptun</th>
             <th data-key="qrcode" class="thhead">QR</th>
             <th data-key="statusSent" class="thhead">Kiküldve</th>
             <th data-key="sentDate" class="thhead">Ekkor</th>
@@ -50,7 +52,8 @@
                     <tr>
                         <td>{row.name}</td>
                         <td>{row.email}</td>
-                        <td>{row.qr}</td>
+                        <td>{row.neptun}</td>
+                        <td>{row.qrcode}</td>
                         <td>{row.statusSent}</td>
                         <td>{row.sentDate.date}</td>
                     </tr>
