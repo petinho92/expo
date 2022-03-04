@@ -4,31 +4,32 @@
 </script>
 
 <section class="section bgcolor">
-    <Countdown from="2022-02-24 09:30:00" dateFormat="YYYY-MM-DD H:m:s" zone="Europe/Budapest" let:remaining>
+<!--    <Countdown from="2022-02-24 09:30:00" dateFormat="YYYY-MM-DD H:m:s" zone="Europe/Budapest" let:remaining>-->
         <div class="container">
-            <h1 id="headline">{$_('countdown.text')}</h1>
+<!--            <h1 id="headline">{$_('countdown.text')}</h1>-->
+            <h1 id="headline">{$_('countdown.end')}</h1>
             <h2>(2022-02-24 09:30)</h2>
-            {#if remaining.done === false}
-                <div id="countdown">
-                    <ul>
-                        {#if remaining.months > 0}
-                            <li><span id="months">{remaining.months}</span>{$_('countdown.month')}</li>
-                        {/if}
-                        <li><span id="days">{remaining.days}</span>{$_('countdown.day')}</li>
-                        <li><span id="hours">{remaining.hours} </span>{$_('countdown.hour')}</li>
-                        <li><span id="minutes">{remaining.minutes}</span>{$_('countdown.minute')}</li>
-                        <li><span id="seconds">{remaining.seconds}</span>{$_('countdown.second')}</li>
-                    </ul>
-                </div>
-            {:else}
-                <div id="content" class="emoji">
-                    <span>🥳</span>
-                    <span>🎉</span>
-                    <span>🎂</span>
-                </div>
-            {/if}
+            <!--{#if remaining.done === false}-->
+            <!--    <div id="countdown">-->
+            <!--        <ul>-->
+            <!--            {#if remaining.months > 0}-->
+            <!--                <li><span id="months">{remaining.months}</span>{$_('countdown.month')}</li>-->
+            <!--            {/if}-->
+            <!--            <li><span id="days">{remaining.days}</span>{$_('countdown.day')}</li>-->
+            <!--            <li><span id="hours">{remaining.hours} </span>{$_('countdown.hour')}</li>-->
+            <!--            <li><span id="minutes">{remaining.minutes}</span>{$_('countdown.minute')}</li>-->
+            <!--            <li><span id="seconds">{remaining.seconds}</span>{$_('countdown.second')}</li>-->
+            <!--        </ul>-->
+            <!--    </div>-->
+            <!--{:else}-->
+            <!--    <div id="content" class="emoji">-->
+            <!--        <span>🥳</span>-->
+            <!--        <span>🎉</span>-->
+            <!--        <span>🎂</span>-->
+            <!--    </div>-->
+            <!--{/if}-->
         </div>
-    </Countdown>
+<!--    </Countdown>-->
 </section>
 <style>
     .container {

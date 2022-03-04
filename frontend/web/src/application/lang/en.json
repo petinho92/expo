@@ -34,6 +34,7 @@
   "countdown.hour": "Hours",
   "countdown.minute": "Minutes",
   "countdown.second": "Seconds",
+  "countdown.end" : "Pollack Expo 2022 is over!",
 
   "programguide.button": "Check(HU)",
   "programguide.button_en": "Check(EN)",
@@ -98,6 +99,7 @@
   "form.common.label.privacy_policy.chamber": "I hereby accept the <a href='/~web/files/privacy_policy_partners_en.pdf' target='_blank'>General Privacy Notice</a> and consent to the processing of my personal data submitted at registration.",
   "form.common.label.privacy_policy.guest": "I hereby accept the <a href='/~web/files/privacy_policy_partners_en.pdf' target='_blank'>General Privacy Notice</a> and consent to the processing of my personal data submitted at registration.",
   "form.common.label.consent": "I hereby declare that I have an Immunity Card or equivalent certificate.",
+  "form.common.registration.disabled": "Registration not active at the moment",
   "form.instuctor.label.lectorinst": "I wish to attend the event: ",
   "form.instructor.label.isinstructor": "As a presenter",
   "form.instructor.label.islecturer": "As a lecturer",

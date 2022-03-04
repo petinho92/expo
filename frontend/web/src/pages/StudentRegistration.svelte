@@ -106,7 +106,8 @@
 
             <div class="field mt-4">
                 <Button type="is-info" on:click={sendData}
-                        disabled={!privacy | !covid}>{$_('menu.registration.registration')}</Button>
+                        disabled>{$_('menu.registration.registration')}</Button><p class="has-text-danger">{$_('form.common.registration.disabled')}</p>
+                <!--disabled={!privacy | !covid}-->
             </div>
         </div>
     </div>

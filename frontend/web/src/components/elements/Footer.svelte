@@ -18,7 +18,7 @@
                     <h4>{$_('menu.sitemap')}</h4>
                     <ul>
                         <li><i class="fas fa-chevron-right"></i> <a on:click={() => push('/')}>{$_('menu.home')}</a></li>
-                        <li><i class="fas fa-chevron-right"></i> <a href='/~web/files/attendence_rules.pdf'>{$_('menu.attendencerules')}</a></li>
+<!--                        <li><i class="fas fa-chevron-right"></i> <a href='/~web/files/attendence_rules.pdf'>{$_('menu.attendencerules')}</a></li>-->
                         <li><i class="fas fa-chevron-right"></i> <a on:click={() => push('/programguide')}>{$_('menu.programguide')}</a></li>
                         <li><i class="fas fa-chevron-right"></i> <a href='/~web/files/PollackEXPO_2022_standok_A3.pdf'>{$_('menu.stands')}</a></li>
                         <li><i class="fas fa-chevron-right"></i> <a on:click={() => push('/sponsors')}>{$_('menu.sponsors')}</a></li>

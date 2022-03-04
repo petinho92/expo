@@ -1,7 +1,7 @@
 {
   "menu.home": "Kezdőlap",
   "menu.programguide": "Programfüzet",
-  "menu.gallery": "Galléria",
+  "menu.gallery": "Galéria",
   "menu.gallery.pressphotos": "Sajtófotók",
   "menu.sponsors": "Támogatóink",
   "menu.accommodation": "Szálláslehetőségek",
@@ -11,6 +11,7 @@
   "menu.registration.instructor": "Előadóknak",
   "menu.registration.chamber": "Mérnökkamarai tagoknak",
   "menu.registration.partners": "Kiállítóknak",
+  "menu.registration.guest": "Vendégeknek",
   "menu.programs": "Aktuális Program",
   "menu.lang": "nyelv",
   "menu.lang.hu": "Magyar",
@@ -34,6 +35,7 @@
   "countdown.hour": "Óra",
   "countdown.minute": "Perc",
   "countdown.second": "Másodperc",
+  "countdown.end" : "A 2022-es Pollack Expo rendezvény véget ért!",
 
   "programguide.button": "Megnézem(HU)",
   "programguide.button_en": "Megnézem(EN)",
@@ -98,6 +100,7 @@
   "form.common.label.privacy_policy.chamber": "Elfogadom az <a href='/~web/files/privacy_policy_partners.pdf' target='_blank'>adatvédelmi tájákoztatót</a> és hozzájárulok a regisztráció során megadott személyes adataim kezeléséhez.",
   "form.common.label.privacy_policy.guest": "Elfogadom az <a href='/~web/files/privacy_policy_partners.pdf' target='_blank'>adatvédelmi tájákoztatót</a> és hozzájárulok a regisztráció során megadott személyes adataim kezeléséhez.",
   "form.common.label.consent": "Nyilatkozom, hogy rendelkezem védettségi igazolvánnyal vagy azzal egyenértékű igazolással.",
+  "form.common.registration.disabled": "Regisztráció jelenleg nem aktív",
   "form.instuctor.label.lectorinst" : "A rendezvényen a következő formában veszek részt",
   "form.instructor.label.isinstructor": "Oktatóként",
   "form.instructor.label.islecturer": "Előadóként",

@@ -61,9 +61,9 @@
                         </div>
 
                         <div class="navbar-start navbar-wide" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
-                            <a class="navbar-item highlighted" href='/~web/files/attendence_rules.pdf'>
-                                {$_('menu.attendencerules')}
-                            </a>
+<!--                            <a class="navbar-item highlighted" href='/~web/files/attendence_rules.pdf'>-->
+<!--                                {$_('menu.attendencerules')}-->
+<!--                            </a>-->
                             <a class="navbar-item nbi" on:click={() => push('/programguide')}>
                                 {$_('menu.programguide')}
                             </a>
@@ -116,7 +116,6 @@
                                     <a class="navbar-item dditem" on:click={() => push('/student')}>
                                         {$_('menu.registration.student')}
                                     </a>
-
                                 </div>
                             </div>
 <!--                            <a class="navbar-item nbi" on:click={() => push('/contact')}>-->
