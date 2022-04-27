@@ -1,9 +1,9 @@
-import type StudentsFormData from "../formData/studentFormData"
+import type StudentFormData from "../formData/studentFormData";
 import handleFetch from "../services/handle-fetch";
 import {active} from "src/application/services/store";
 
 
-export function hirundinidae(input: StudentsFormData){
+export function hirundinidae(input: StudentFormData){
     fetch('/post/studentPost', {
         method: 'POST',
         headers: {
@@ -19,3 +19,5 @@ export function hirundinidae(input: StudentsFormData){
         }
     })
 }
+
+

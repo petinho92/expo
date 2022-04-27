@@ -15,6 +15,7 @@ class StudentService{
                 'neptun' => $adat->neptun,
                 'email' => $adat->email,
                 'qrcode' => $adat->getQRCode(),
+                'created' => $adat->created
             ];
         }
         return $array;
@@ -41,6 +42,11 @@ class StudentService{
                 $student->neptun
             );
         }
+    }
+
+    public function getAllStudentInformation(){
+        return Student::search()->collect();
+
     }
 
 }

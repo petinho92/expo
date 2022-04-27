@@ -1,17 +1,15 @@
 <script>
     import Footer from '../components/elements/Footer.svelte';
     import Images from "../components/gallery/Images.svelte";
-    // import {y2020e2, y2020k2} from "src/application/store/images.ts";
-    import {y2022ea, y2022k, y2022f, y2022sf, y2022hackaton} from "src/application/store/gallery.ts";
+    import {y2022ea, y2022k, y2022f, y2022sf, y2022hackaton, y2020f, y2020k, y2020ea, y2020uponor, y2019ea, y2019ep, y2019fo, y2019k} from "src/application/store/gallery.ts";
     import {_} from 'svelte-i18n';
+    import {push} from "svelte-spa-router";
 
 </script>
 
 <div class="ml-2 title">
-    2022
+    <h1 class="has-text-centered">2022</h1>
 </div>
-
-
 <div class="conatiner">
     <div class="wrap">
 
@@ -35,14 +33,67 @@
             <h1>Hackaton</h1>
             <Images images={y2022hackaton}/>
         </div>
-
+        <div class="box" on:click={() => push('/video')}>
+            <h1>Videók</h1>
+            <img src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc"/>
+        </div>
     </div>
 </div>
+<br>
+<div class="ml-2 title">
+    <h1 class="has-text-centered">2020</h1>
+</div>
+<div class="conatiner">
+    <div class="wrap">
+        <div class="box">
+            <h1>{$_('gallery.title.presentation')}</h1>
+            <Images images={y2020ea}/>
+        </div>
+        <div class="box">
+            <h1>{$_('gallery.title.exhibition')}</h1>
+            <Images images={y2020k}/>
+        </div>
+        <div class="box">
+            <h1>Fogadás</h1>
+            <Images images={y2020f}/>
+        </div>
+        <div class="box">
+            <h1>Uponor laboravató</h1>
+            <Images images={y2020uponor}/>
+        </div>
+    </div>
+</div>
+<br>
+<div class="ml-2 title">
+    <h1 class="has-text-centered">2019</h1>
+</div>
+<div class="conatiner">
+    <div class="wrap">
+
+        <div class="box">
+            <h1>{$_('gallery.title.presentation')}</h1>
+            <Images images={y2019ea}/>
+        </div>
+        <div class="box">
+            <h1>EP</h1>
+            <Images images={y2019ep}/>
+        </div>
+        <div class="box">
+            <h1>{$_('gallery.title.exhibition')}</h1>
+            <Images images={y2019k}/>
+        </div>
+        <div class="box">
+            <h1>Fogadás</h1>
+            <Images images={y2019fo}/>
+        </div>
+    </div>
+</div>
+<br>
 <Footer/>
 <style>
     .conatiner {
         width: 100%;
-        height: 600px;
+        height: 100%;
     }
     .wrap {
         display: -webkit-box;

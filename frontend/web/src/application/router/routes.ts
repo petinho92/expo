@@ -6,6 +6,7 @@ import Sponsor from "src/pages/Sponsor.svelte";
 import Contact from "src/pages/Contact.svelte";
 import StudentRegistration from "src/pages/StudentRegistration.svelte";
 import GetQRCode from "src/pages/GetQRCode.svelte";
+import VideoGallery from "src/pages/VideoGallery.svelte";
 
 
 const routes = {
@@ -17,7 +18,8 @@ const routes = {
     '/gallery' :Gallery,
     '/contact' : Contact,
     '/student' : StudentRegistration,
-    '/qr/:code' : GetQRCode
+    '/qr/:code' : GetQRCode,
+    '/video' : VideoGallery
 
 
 

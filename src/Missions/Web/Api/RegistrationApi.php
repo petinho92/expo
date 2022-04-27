@@ -27,4 +27,6 @@ class RegistrationApi extends Api
             'statusCode' => http_response_code(200),
         );
     }
+
+
 }

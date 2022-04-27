@@ -29,11 +29,11 @@ window.addEventListener('load', () => {
 				// new MenuItem("Dashboard", FaIcon.s("dice-d6"), () => {pageManager.add(new DashboardPage())}),
 				new MenuItem("Scanner", FaIcon.s("barcode"), ()=>{pageManager.add(new ScannerPage())}),
 				new MenuItem("Registrants", FaIcon.s("search"), ()=>{pageManager.add(new StatPage())}),
-				new MenuItem("Email", FaIcon.s("envelope"), ()=>{pageManager.add(new EmailPage())}),
+				new MenuItem("Email", FaIcon.s("envelope"), ()=>{pageManager.add(new EmailPage())},"admin"),
 				new MenuItem("User", FaIcon.s("users"), [
 					new MenuItem("New User", FaIcon.s("user-plus"), ()=> {pageManager.add(new FormPage(new UserForm()))}),
 				], "administrator"),
-					new MenuItem("User List", FaIcon.s("users"), ()=> {listManager.add(new UserList()),"administrator"})
+					new MenuItem("User List", FaIcon.s("users"), ()=> {listManager.add(new UserList()),"admin"})
 			]
 		}
 

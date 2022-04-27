@@ -10,7 +10,7 @@
         pagination: true,
         scrollY: true,
         scrollX: true,
-        rowPerPage: 50,
+        rowPerPage: 25,
         columnFilter: false,
         css: false,
         labels: {
@@ -42,8 +42,9 @@
             <th data-key="email" class="thhead">Email</th>
             <th data-key="neptun" class="thhead">Neptun</th>
             <th data-key="qrcode" class="thhead">QR</th>
+            <th data-key="created" class="thhead">Regisztrált</th>
             <th data-key="statusSent" class="thhead">Kiküldve</th>
-            <th data-key="sentDate" class="thhead">Ekkor</th>
+            <th data-key="sentDate" class="thhead">Email kiment</th>
 
             </thead>
             <tbody>
@@ -54,8 +55,9 @@
                         <td>{row.email}</td>
                         <td>{row.neptun}</td>
                         <td>{row.qrcode}</td>
+                        <td>{row.created}</td>
                         <td>{row.statusSent}</td>
-                        <td>{row.sentDate.date}</td>
+                        <td>{row.sentDate}</td>
                     </tr>
                 {/each}
             {/if}
@@ -71,7 +73,7 @@
         grid-gap: 4px;
         background: lightskyblue;
         padding: 8px;
-        height: 900vh;
+        height: 90vh;
         color: black;
     }
     section {
@@ -80,11 +82,14 @@
     }
 
     th:first-child {
-        min-width: 200px;
+        min-width: 250px;
         color: black;
         font-weight: bold;
     }
 
+    th{
+        min-width: 200px;
+    }
     .thhead{
         color: black;
         font-weight: bold;
